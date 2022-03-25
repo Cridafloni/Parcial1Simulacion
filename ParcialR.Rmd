@@ -30,4 +30,24 @@ boxplot(japon, horizontal=TRUE, main = "Boxplot Población Estados Unidos", xlab
 #stripchart(argentina, method = "jitter", pch = 19, add = TRUE, col = "blue",  main = "Boxplot Población Argentina", xlab= "Población Cientos de miles")
 ```
 
+## Punto 2
+Avianca se encuentra estudiando la situación de venta de puesto en el vuelo Armenia – Bogotá puesto que ha identificado que el 2% de las personas que reservaron puesto, no se presentan a la hora del embarque. Teniendo en cuenta que el avión A320 utilizado en esta ruta tiene una capacidad para 180 pasajeros, la empresa decide vender 181 tiquetes. ¿Cuál es la probabilidad de que todas las personas que llegan a embarque puedan tener su silla asegurada y no se presenten quejas por “sobre-vender” sillas ante la aeronáutica civil? Asuma que las llegadas de los pasajeros siguen una distribución Poisson.
+
+
+```{r punto2, echo=FALSE}
+cat("x = numero de personas con su puesto asegurado")
+probabilidad <-dpois(181,177.38)
+cat("la probabilidad de que no se presenten quejas por sobre-vender asientos es de: ", 1-probabilidad)
+plot(100:250,dpois(100:250,177.38),  main = expression(paste( "Distribución de Poisson para un vuelo Armenia-Bogota ", lambda,"=177.38")), xlab = "Numero de personas que van al vuelo", ylab = "Probabilidad" )
+```
+
+## Punto 3 
+En la planta envasadora de Coca-Cola FEMSA ubicada en Tocancipá se realiza el embotellado de la CocaCola presentación de 400 mL (en promedio), con una desviación estándar de 5 mL (mililitros). Si se sabe por experiencia que este proceso de embotellado sigue una distribución normal, y también se sabe que todo producto con más de 415 mL es declarado como NO CONFORME. Determine el porcentaje de las botellas de gaseosa que son declaradas producto NO CONFORME.
+
+```{r punto3, echo=FALSE}
+
+cat("x = numero de coca-colas no conformes")
+pnorm(415,400,5,lower.tail = FALSE)
+plot(380:420, dnorm(380:420,400,5),  main = expression(paste( "Distribución normal para embotellado de cocacola : ", mu ,"= 400, ", sigma,"=5")), xlab = "Cantidad de contenido en ml de las botellas de cocacola", ylab = "Probabilidad")
+```
 
