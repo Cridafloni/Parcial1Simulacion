@@ -1,5 +1,5 @@
 ---
-title: "Parcial1CristianFlorez"
+title: "Parcial 1 Cristian Florez - Juan Miguel Giraldo"
 output: html_document
 date: '2022-03-24'
 ---
