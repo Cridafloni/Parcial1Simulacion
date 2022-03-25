@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ##### Presentado por : Cristian Flórez Nieto & Juan Miguel Giraldo Zuluaga
-## 1. 
+## Punto 1. 
 La tabla mostrada contiene valores de población, en cientos de miles, de las diez ciudades más
 pobladas de cuatro países en el año 1967:
 
@@ -23,11 +23,17 @@ holanda <- c(8.68, 7.31, 6.02, 2.64, 1.75, 1.72, 1.51, 1.42, 1.31, 1.29)
 japon <- c(110.21, 32.14, 18.88, 16.38, 13.37, 11.92, 10.71, 7.80, 7.70, 7.00)
 
 
-boxplot(argentina, horizontal= TRUE, main = "Boxplot Población Argentina", xlab= "Población Cientos de miles", outpch = 23, outcex = 2, outcol=2, outbug=4)
-boxplot(eeuu, horizontal=TRUE, main = "Boxplot Población Estados Unidos", xlab= "Población Cientos de miles", outpch = 23, outcex = 2, outcol=2, outbug=4)
-boxplot(holanda, horizontal=TRUE, main = "Boxplot Población Holanda", xlab= "Población Cientos de miles", outpch = 23, outcex = 2, outcol=2, outbug=4 )
-boxplot(japon, horizontal=TRUE, main = "Boxplot Población Estados Unidos", xlab= "Población Cientos de miles", outpch = 23, outcex = 2, outcol=2, outbug=4)
+boxplot(argentina, horizontal= TRUE, main = "Boxplot Población Ciudades Argentina 1967", xlab= "Población Cientos de miles", outpch = 23, outcex = 2, outcol=2, outbug=4)
+boxplot(eeuu, horizontal=TRUE, main = "Boxplot Población Ciudades Estados Unidos 1967", xlab= "Población Cientos de miles", outpch = 23, outcex = 2, outcol=2, outbug=4)
+boxplot(holanda, horizontal=TRUE, main = "Boxplot Población Ciudades Holanda 1967", xlab= "Población Cientos de miles", outpch = 23, outcex = 2, outcol=2, outbug=4 )
+boxplot(japon, horizontal=TRUE, main = "Boxplot Población Ciudades Japon 1967", xlab= "Población Cientos de miles", outpch = 23, outcex = 2, outcol=2, outbug=4)
 #stripchart(argentina, method = "jitter", pch = 19, add = TRUE, col = "blue",  main = "Boxplot Población Argentina", xlab= "Población Cientos de miles")
+cat("Los países con datos atípicos son Argentina, Estados Unidos y Japón, mientras que Holanda no posee datos atípicos.\n Por otro lado en Argentina las la mayoria de las ciudades se encuentran en un rango cercano que no supera los 10, Estados Unidos tiene un poco más de dispersión. Holanda una gran dispersión entre la población de sus ciudades, mientras en Japón las poblaciones de las ciudades se encuentran cercanas. ")
+```
+b) Compare los centros de cada población, sus dispersiones y su simetría. ¿Cuál es el país más
+homogéneamente habitado? ¿Cuáles son las características más sobresalientes? ¿Hay outliers?
+```{r punto1b, echo=FALSE}
+cat("En Argentina la población se encuentra poco dispersa con muchos datos en el primer cuartil, en Estados Unidos ocurre lo mismo: los datos están concentrados en el primer cuartil, sin embargo tiene los datos un poco dispersos teniendo en cuenta la escala que maneja. Por otro lado Holanda presenta una dispersión más homogenea pero con datos acumulados en el primer cuartil. Japón tiene una buena dispersión con una buena simetria debido a la ubicación del Q2.")
 ```
 
 ## Punto 2
@@ -36,9 +42,9 @@ Avianca se encuentra estudiando la situación de venta de puesto en el vuelo Arm
 
 ```{r punto2, echo=FALSE}
 cat("x = numero de personas con su puesto asegurado")
-probabilidad <-dpois(181,177.38)
+# p(x>=181)
+probabilidad <-dpois(181,176.4)
 cat("la probabilidad de que no se presenten quejas por sobre-vender asientos es de: ", 1-probabilidad)
-plot(100:250,dpois(100:250,177.38),  main = expression(paste( "Distribución de Poisson para un vuelo Armenia-Bogota ", lambda,"=177.38")), xlab = "Numero de personas que van al vuelo", ylab = "Probabilidad" )
 ```
 
 ## Punto 3 
