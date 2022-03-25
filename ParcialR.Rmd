@@ -1,0 +1,33 @@
+---
+title: "Parcial1CristianFlorez"
+output: html_document
+date: '2022-03-24'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##### Presentado por : Cristian Flórez Nieto & Juan Miguel Giraldo Zuluaga
+## 1. 
+La tabla mostrada contiene valores de población, en cientos de miles, de las diez ciudades más
+pobladas de cuatro países en el año 1967:
+
+a) Construya un box-plot e identifique los puntos extremos. ¿Cuáles son las características más
+sobresalientes? ¿Hay outliers?
+
+```{r punto1a, echo=FALSE}
+argentina<- c(29.66, 7.61, 6.35, 4.10, 3.80, 2.75, 2.70, 2.69, 2.51, 2.44) 
+eeuu<- c(77.81, 35.50, 24.79, 20.02, 16.70, 9.39, 9.38, 8.76, 7.63, 7.50)
+holanda <- c(8.68, 7.31, 6.02, 2.64, 1.75, 1.72, 1.51, 1.42, 1.31, 1.29)
+japon <- c(110.21, 32.14, 18.88, 16.38, 13.37, 11.92, 10.71, 7.80, 7.70, 7.00)
+
+
+boxplot(argentina, horizontal= TRUE, main = "Boxplot Población Argentina", xlab= "Población Cientos de miles", outpch = 23, outcex = 2, outcol=2, outbug=4)
+boxplot(eeuu, horizontal=TRUE, main = "Boxplot Población Estados Unidos", xlab= "Población Cientos de miles", outpch = 23, outcex = 2, outcol=2, outbug=4)
+boxplot(holanda, horizontal=TRUE, main = "Boxplot Población Holanda", xlab= "Población Cientos de miles", outpch = 23, outcex = 2, outcol=2, outbug=4 )
+boxplot(japon, horizontal=TRUE, main = "Boxplot Población Estados Unidos", xlab= "Población Cientos de miles", outpch = 23, outcex = 2, outcol=2, outbug=4)
+#stripchart(argentina, method = "jitter", pch = 19, add = TRUE, col = "blue",  main = "Boxplot Población Argentina", xlab= "Población Cientos de miles")
+```
+
+
